@@ -4,14 +4,14 @@
 # các tác vụ
   tasks:
       - name: Create loobback
-              ios_l3_interface::
+              ios_l3_interface:
                 name: loopback {{item.numlb}}
-                ipv4: 10.0."{{item.ipv4}}".1
+                ipv4: 10.0."{{item.ipv4}}".1/24
                 state: present
               with_items:
                 - { numlb: 1, ipv4: 1 }
                 - { numlb: 2, ipv4: 2 }
-                - { numlb: 3, ipv4: 5}
+                - { numlb: 3, ipv4: 5 }
     
     #Xem lại tất cả các cổng
     - name: Show ip
