@@ -4,7 +4,7 @@
 # các tác vụ
   tasks:
     - name: Create loobback
-        ios_l2_interface:
+        ios_l3_interface:
             name: loopback {{item.numlb}}
             ipv4: 10.0."{{item.ipv4}}".1/24
             state: present
